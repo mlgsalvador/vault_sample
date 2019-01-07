@@ -8,6 +8,6 @@ node {
                        vaultCredentialId: 'VAULT_ROOT_TOKEN']
                        
   wrap([$class: 'VaultBuildWrapper', configuration: configuration, vaultSecrets: secrets]) {
-      sh 'echo $first_secret'
+      sh 'echo $first_secret > test_secret'
   }
 }
